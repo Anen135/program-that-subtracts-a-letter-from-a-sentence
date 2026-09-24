@@ -1,8 +1,2 @@
 string = "Роскомнадзор запретил букву"
-alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
-
-for letter in alphabet:
-    if letter in string:
-        print(string, letter)
-        string = string.replace(letter, "")
-        string = string.replace(letter.upper(), "")
+[print(string, l) or (string := string.replace(l, '').replace(l.upper(), '')) for l in "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" if l in string]
